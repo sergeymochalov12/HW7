@@ -1,8 +1,8 @@
 package service;
 
 import calculator.Operation;
-import modelCalculator.ComplexNumber;
-
+import models.ComplexNumber;
+// класс для вычисления разницы двух комплексных чисел Z1 и Z2
 public class SubtractionOperation implements Operation {
     private final Logger logger;
 
@@ -11,15 +11,15 @@ public class SubtractionOperation implements Operation {
     }
 
     @Override
-    public String key() {
+    public String operator() {
         return "-";
     }
 
     @Override
-    public ComplexNumber calculate(ComplexNumber firstNumber, ComplexNumber secondNumber) {
-        logger.log("Выполняется вычитание чисел " + firstNumber + " - " + secondNumber);
-        double resultRealPart = firstNumber.getRealPart() - secondNumber.getRealPart();
-        double resultImaginaryPart = firstNumber.getImaginaryPart() - secondNumber.getImaginaryPart();
+    public ComplexNumber calculate(ComplexNumber Z1, ComplexNumber Z2) {
+        logger.log("Выполняется вычитание чисел " + Z1 + " - " + Z2);
+        double resultRealPart = Z1.getRealPart() - Z2.getRealPart();
+        double resultImaginaryPart = Z1.getImaginaryPart() - Z2.getImaginaryPart();
         return new ComplexNumber(resultRealPart, resultImaginaryPart);
     }
 }

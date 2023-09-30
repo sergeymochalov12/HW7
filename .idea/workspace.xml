@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da0135fd-842f-4fc3-9de2-07a8b668d6e9" name="Changes" comment="Калькулятор + Logger + Complex">
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/DevOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/FactoryComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/CreateComplexNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelCalculator/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelCalculator/MultiplyOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MultiplyOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelCalculator/SubtractionOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SubtractionOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelCalculator/SumOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SumOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/calculator/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calculator/Operation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelCalculator/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ComplexNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CreateComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CreateComplexNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/MultiplyOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MultiplyOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SubtractionOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SubtractionOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/SumOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SumOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/ViewCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ViewCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +40,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -46,14 +56,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/artem/IdeaProjects/Semi6OOP&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/JAVA/Anna/HW/ComplexNumberCalculator/src/main/java/org/example/ComplexDivision.java"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

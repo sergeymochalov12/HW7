@@ -1,8 +1,8 @@
 package service;
 
 import calculator.Operation;
-import modelCalculator.ComplexNumber;
-
+import models.ComplexNumber;
+// класс для вычисления произведения двух комплексных чисел Z1 и Z2
 public class MultiplyOperation implements Operation {
 
     private final Logger logger;
@@ -12,19 +12,18 @@ public class MultiplyOperation implements Operation {
     }
 
     @Override
-    public String key() {
+    public String operator() {
         return "*";
     }
 
     @Override
-    public ComplexNumber calculate(ComplexNumber firstNumber, ComplexNumber secondNumber) {
-        logger.log("Выполняется умножение чисел " + firstNumber + " * " + secondNumber);
-        double a = firstNumber.getRealPart();
-        double b = firstNumber.getImaginaryPart();
-        double c = firstNumber.getRealPart();
-        double d = firstNumber.getImaginaryPart();
-        double resultRealPart = a * c - b * d;
-        double resultImaginaryPart = a * d + b * c;
+    public ComplexNumber calculate(ComplexNumber Z1, ComplexNumber Z2) {
+        logger.log("Выполняется умножение чисел " + Z1 + " * " + Z2);
+
+
+        double resultRealPart = Z1.getRealPart() * Z2.getRealPart() - Z1.getImaginaryPart() * Z2.getImaginaryPart();
+        double resultImaginaryPart = Z1.getRealPart() * Z2.getImaginaryPart() + Z1.getImaginaryPart() * Z2.getRealPart();
+
         return new ComplexNumber(resultRealPart, resultImaginaryPart);
 
     }

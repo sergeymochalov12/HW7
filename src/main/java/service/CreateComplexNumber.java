@@ -1,6 +1,6 @@
 package service;
 
-import modelCalculator.ComplexNumber;
+import models.ComplexNumber;
 import view.ViewCalculator;
 
 public class CreateComplexNumber {
@@ -12,7 +12,7 @@ public class CreateComplexNumber {
     }
 
     public ComplexNumber create() {
-        double realPart = viewCalculator.promptDouble("Введите реальную часть ");
+        double realPart = viewCalculator.promptDouble("Введите вещественную часть ");
         double imaginaryPart = viewCalculator.promptDouble("Введите мнимую часть ");
         return new ComplexNumber(realPart, imaginaryPart);
     }

@@ -8,12 +8,12 @@ public class ViewCalculator {
     public ViewCalculator() {
 
     }
-
+    // метод для отправки сообщения пользователю
     public void sendMessage(String message) {
         System.out.println(message);
     }
 
-
+    // метод ввода команды
     public String prompt(String message) {
         Scanner in = new Scanner(System.in);
         System.out.print(message);

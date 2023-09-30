@@ -1,6 +1,6 @@
 package calculator;
 
-import modelCalculator.ComplexNumber;
+import models.ComplexNumber;
 import service.Logger;
 import view.ViewCalculator;
 
@@ -15,12 +15,11 @@ public class Calculator {
     private final Logger logger;
 
     /**
-     * Конструктор класса собирающий сервисы вычислений в Мар по ключу операции при реализации Spring  (ветка Spring)сам
-     * собирает нужные сервисы в List. В результате добавления операций не нарушаеться принцип ОСР
+     * Конструктор класса собирающий сервисы вычислений в Мар по ключу операции
      */
-    public Calculator(List<Operation> allOperation, ViewCalculator viewCalculator, Logger logger) {
-        operationMap = allOperation.stream()
-                .collect(Collectors.toMap(Operation::key, Function.identity()));
+    public Calculator(List<Operation> allOperation, ViewCalculator viewCalculator, Logger logger)
+    {
+        operationMap = allOperation.stream().collect(Collectors.toMap(Operation::operator, Function.identity()));
         this.viewCalculator = viewCalculator;
         this.logger = logger;
     }
@@ -28,20 +27,20 @@ public class Calculator {
     /**
      * Метод определяющий переданную операцию и направляющий комплексные числа в определенный сервис для вычислений
      */
-    public ComplexNumber calculate(ComplexNumber firstNumber, ComplexNumber secondNumber, String operationKey) throws UnsupportedOperationException {
+    public ComplexNumber calculate(ComplexNumber Z1, ComplexNumber Z2, String operationKey) throws UnsupportedOperationException {
         Operation operation = operationMap.get(operationKey);
         if (operation != null) {
-            return operation.calculate(firstNumber, secondNumber);
+            return operation.calculate(Z1, Z2);
         }
         throw new UnsupportedOperationException();
     }
 
-    public void run(ComplexNumber firstNumber, ComplexNumber secondNumber) {
+    public void run(ComplexNumber Z1, ComplexNumber Z2) {
         String opr = viewCalculator.prompt("Введите выполняемую операцию ").trim();
-        logger.log("Передаем для вычисления выражение" + firstNumber + " " + opr + " " + secondNumber);
+        logger.log("Передаем для вычисления выражение" + Z1 + " " + opr + " " + Z2);
         try {
-            String message = "Результат вычмслений " + firstNumber + " " + opr + " " + secondNumber + " = "
-                    + calculate(firstNumber, secondNumber, opr);
+            String message = "РЕЗУЛЬТАТ  " + Z1 + " " + opr + " " + Z2 + " = "
+                    + calculate(Z1, Z2, opr);
             viewCalculator.sendMessage(message);
             logger.log(message);
         } catch (UnsupportedOperationException e) {
